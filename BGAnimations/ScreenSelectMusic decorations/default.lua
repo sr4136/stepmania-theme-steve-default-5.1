@@ -492,4 +492,21 @@ t[#t+1] = Def.ActorFrame {
 	};
 };
 
+-- Group (Steve Custom)
+t[#t+1] = Def.ActorFrame {
+    LoadFont("Common Condensed") .. {
+		InitCommand=cmd(rotationz,90;zoom,0.75;x,SCREEN_BOTTOM+550;y,SCREEN_CENTER_Y+10;diffuse,color("#FFFFFF");visible,not GAMESTATE:IsCourseMode());
+		OnCommand=cmd(queuecommand,"Set");
+		CurrentCourseChangedMessageCommand=cmd(queuecommand,"Set"); 
+		SetCommand=function(self)
+			local song = GAMESTATE:GetCurrentSong()
+			if song then
+				self:settext(song:GetGroupName() );
+			else
+				self:settext("");
+			end;
+		end;
+    };
+};
+
 return t;
