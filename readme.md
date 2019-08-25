@@ -1,6 +1,6 @@
 Steve
 -----------
-Copied this theme & modified it.
+Copied this theme & modified it. See the video for the final output: https://i.imgur.com/krVmsyZ.mp4
 
 Introduction
 -----------
